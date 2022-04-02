@@ -1,0 +1,44 @@
+a, article, aside, 
+b, body, 
+center, canvas, caption, code, command,
+div, details, dialog, dd, dl,
+embed,
+fieldset, figure, font, footer, form,
+h1, h2, h3, h4, h5, h6, header, hgroup, html,
+i, iframe, img,
+label, legend, li,
+nav,
+object, ol, output,
+p, pre, progress,
+q,
+s, section, small, span, sourse, strong, sub,
+table, tbody, tfoot, thead, th, tr, tt, tdvideo,
+u, ul,
+var {
+	background: transparent;
+	border: 0 none;
+	font-size: 100%;
+	margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+	vertical-align: top;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+table, table td {
+	padding: 0;
+	border: none;
+	border-collapse: collapse;
+}
+
+img {
+	vertical-align: top;
+}
+
+embed {
+	vertical-align: top;
+}

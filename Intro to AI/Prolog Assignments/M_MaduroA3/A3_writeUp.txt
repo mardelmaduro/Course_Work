@@ -1,0 +1,9 @@
+﻿COMP 3190 A3 Write up
+
+System Inadequacies
+
+1.System does not function as desired: This could be rectified by researching some other menu based asking systems and tweaking mine based on my findings.
+
+2.System does not contain knowledge for indoor photography: Extending the system to do so effectively would require the inclusion of knowledge on various lighting tools (most likely more than one at a time)as well as their interactions with each other and the room they are located in. 
+
+3. System does not include an implementation of fuzzy logic to allow for creative deviation from recommended settings, as well as feedback as to what the effects of said deviations would be. - This problem could be solved by a method that would print a set of 3 recommended settings based on  deviations from the original setting and wether the photo was under or over exposed. This could be done through incrementing through the settings on an arithmetical basis.

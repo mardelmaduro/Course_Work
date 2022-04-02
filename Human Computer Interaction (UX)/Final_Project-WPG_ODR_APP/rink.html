@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Winnipeg ODR</title>
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/structure.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/stylescript.js"></script>
+	<script src="js/rinkList.js"></script>
+	<script src="js/rinkInformation.js"></script>
+</head>
+<body id="home">
+	<div class="bg-header">
+		<img src="img/winnipeg.jpg" class="bgImg" alt="Click on area of map for a list of rinks" style="opacity:0.6">
+		<div class="grid">
+			<header>
+				<div class="bgwrap">
+					<h1 style="text-align:center;color:#ffffff;">WINNIPEG <span style="color:#ff0000;">ODR</h1>
+				</div>
+			</header>
+		</div>
+	</div>
+	<div class="main">
+		<div class="bg-header">
+			<div class="grid">
+				<div class="row">
+					<div class="col-1-3">
+						<div class="map-container">
+							<ul class="tabs">
+								<li>
+									<input type="radio" name="tabs" id="tab1" checked />
+									<label for="tab1">Gallery</label>
+									<div id="tab-content1" class="tab-content">
+										<a href="img/page1.jpg">
+											<img src="img/page1.jpg" alt="Rink" title="Convention center rink" width="400" height="300">
+										</a>
+									</div>
+								</li>
+								<li>
+									<input type="radio" name="tabs" id="tab2" />
+									<label for="tab2">Map</label>
+									<div id="tab-content2" class="tab-content" style="display:none">
+										<a>
+											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.4558466372005!2d-97.3178031987493!3d49.88869426944252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea0c686100e51b%3A0x4a7ff89bdb9812c2!2s861+Buchanan+Blvd%2C+Winnipeg%2C+MB+R2Y+1N1!5e0!3m2!1sen!2sca!4v1479500610062" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</a>	
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-2-3">
+						<div class="col-4-5">
+							<div class="ratings-container">
+								<div class="rink-name">
+									<h2 id="rinkName">Crestwood C.C</h2>
+								</div>
+								<div class="rink-address">
+									<a id="rinkAdress">1170 Corydon Ave, Winnipeg, MB</a>
+								</div>
+								<div class="row">
+									<div class="amenities" id="rinkAmenities">
+
+									</div>
+								</div>
+								<div class="row">
+									<div class="ratings" id="rinkRating">
+
+									</div>
+								</div>
+								<div class="row">
+									<div class="button-container">
+										<button class="button">SHARE</button>
+										<button class="button" id="rateButton">RATE</button>
+										<button class="button" id="commentButton">COMMENT</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-5">
+							<div class="status-container" style="color:black;">
+								<div class="status-wrap" id="rinkStatusField">
+									
+								</div>				
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="grid" style="border-bottom:4px solid red;">
+				<div class="bgwrap">
+					<div class="row">
+						<div class="ice-container" >
+							<div class="wrap-center">	
+								<div class="quality" id="iceQuality">
+									<h2>Ice Quality:</h2>						
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="grid">
+				<div class="feed-comment-container">
+					<div class="row">
+						<div class="col-full">
+							<ul class="tabs">
+								<li class="col-1-2">
+									<input type="radio" name="tabs-label" id="tab-comments" checked />
+									<label for="tab-comments" style="font-size:20px;">COMMENTS</label>
+								</li>
+								<li class="col-1-2">
+									<input type="radio" name="tabs-label" id="tab-feed" />
+									<label for="tab-feed" style="font-size:20px;">LIVE FEED</label>
+								</li>
+							</ul>
+						</div>		
+					</div>
+					<div class="row">
+						<div id="comment-section" class="tab-content fix-tab-position" style="">
+							<div class="comment-box" id="commentBox" style="">
+								
+							</div>					
+						</div>
+						<div id="feed-section" class="tab-content fix-tab-position" style="display:none;">
+							 <h4>SORRY, NOT AVAILABLE</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--POPUP WINDOW (Make a comment)-->
+	<div class="show-make-comment-box" id="commentWindow" style="display:none;">
+		<div class="full">
+			<div class="centered-y">
+				<div class="form-container">
+					<div class="close-box">X</div>
+						<div class="wrap-label">
+							<label> Name: <br><input type="text" id="commenterName" name="name" placeholder="Enter Name Here"><br> </label>
+							<label> Comment: <br><textarea cols="35" id="commenterMessage" rows="5" name="message" placeholder="Enter Message Here"></textarea></label><br>
+						</div>
+					<div class="center-element">
+						<button class="postButton" id="makeCommentButton">POST</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--POPUP WINDOW (Make a rating)-->
+	<div class="show-make-rating" id="ratingWindow" style="display:none;">
+		<div class="full">
+			<div class="centered-y">
+				<div class="make-rating-container">
+					<div class="close-box">X</div>
+					<div class="wrap-rating-container">
+						<div class="rating-container">
+							<p>Rate this rink on a scale of 1-5:</p>
+							<div class="rate-amount-container">
+								<img id="one-star" src="img/HCI_Icons/starRating.png" alt="Positive Rating" title="Rating">
+								<img id="two-star" src="img/HCI_Icons/starRating.png" alt="Positive Rating" title="Rating">
+								<img id="three-star" src="img/HCI_Icons/starRating.png" alt="Positive Rating" title="Rating">
+								<img id="four-star" src="img/HCI_Icons/starRating.png" alt="Positive Rating" title="Rating">
+								<img id="five-star" src="img/HCI_Icons/starRating.png" alt="Positive Rating" title="Rating">
+							</div>					
+							<div class="rate-amount-text">
+								<center>
+									<p id="1-star-text">Poor</p>
+									<p id="2-star-text">Not Bad</p>
+									<p id="3-star-text">Good</p>
+									<p id="4-star-text">Great!</p>
+									<p id="5-star-text">Excellent!</p>
+								</center>
+							</div>
+						</div>
+						<div class="rating-container">
+							<p>Rate this rink's Ice Quality:</p>
+							<div class="rate-amount-container">
+								<img id="one-ice" src="img/HCI_Icons/iceRating.png" alt="Ice Quality" title="Ice Quality">
+								<img id="two-ice" src="img/HCI_Icons/iceRating.png" alt="Ice Quality" title="Ice Quality">
+								<img id="three-ice" src="img/HCI_Icons/iceRating.png" alt="Ice Quality" title="Ice Quality">
+								<img id="four-ice" src="img/HCI_Icons/iceRating.png" alt="Ice Quality" title="Ice Quality">
+								<img id="five-ice" src="img/HCI_Icons/iceRating.png" alt="Ice Quality" title="Ice Quality">
+							</div>
+							<div class="rate-amount-text">
+								<center>
+									<p id="1-ice-text">Poor</p>
+									<p id="2-ice-text">Not Bad</p>
+									<p id="3-ice-text">Good</p>
+									<p id="4-ice-text">Great!</p>
+									<p id="5-ice-text">Excellent!</p>
+								</center>
+							</div>							
+						</div>
+					</div>
+					<button class="send-rating" id="submitRating">SUBMIT</button>
+				</div>
+			</div>
+		</div>							
+	</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">BudgIt</string>
+    <string name="app_title">Personal Budgeting App</string>
+
+    <string name="button_wishlist">Wish List</string>
+    <string name="button_income_source">Income Source</string>
+    <string name="button_expenses">Expenses</string>
+    <string name="button_financial_summary">Financial Summary</string>
+    <string name="button_buy">Buy</string>
+
+    <string name="text_item_name">Item Name</string>
+    <string name="text_price">Price</string>
+    <string name="button_add">Add</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_update">Update</string>
+    <string name="button_purchased">Purchased</string>
+
+    <string-array name="incomes_array">
+        <item>Misc</item>
+        <item>Weekly</item>
+        <item>Bi-weekly</item>
+        <item>Monthly</item>
+    </string-array>
+
+    <string name="fatalError">Fatal error</string>
+    <string name="warning">Warning</string>
+
+</resources>
